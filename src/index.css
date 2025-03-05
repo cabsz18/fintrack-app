@@ -7,3 +7,6 @@
     --color-theme-color: rgb(136, 0, 21);
     /* ... */
 }
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));

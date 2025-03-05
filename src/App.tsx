@@ -1,5 +1,18 @@
-const App = () => {
-  return <div className="text-theme-color font-calibri">Hello World</div>;
-};
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Login } from '@pages/auth/login/Login'
+import { Register } from '@pages/auth/register/Register'
+import { ForgotPassword } from '@pages/auth/forgot/ForgotPassword'
 
-export default App;
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/forgot-password' element={<ForgotPassword />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default App
